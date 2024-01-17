@@ -10,7 +10,7 @@ public class Exercise3 {
         
     }
 
-    // <Метод за разпечатване на съдържанието на директорията>
+    // <Метод за разпечатване на съдържанието на директорията
     private static void printDirectoryContents(String path) {
         File directory = new File(path);
 
