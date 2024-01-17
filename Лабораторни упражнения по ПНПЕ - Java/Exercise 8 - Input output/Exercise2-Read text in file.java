@@ -8,19 +8,19 @@ public class Exercise2 {
 		
         Scanner scanner = new Scanner(System.in);
 
-        // Въвеждане на име на файла от потребителя
+       
         System.out.println("Enter file name:");
         String fileName = scanner.nextLine();
 
-        // Създаване на файлов поток за четене
+        
         try 
         {
-        	
+        	//Р§РµС‚РµРЅРµ РЅР° С„Р°Р№Р»Р°
             FileReader fileReader = new FileReader(fileName);
             
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             
-            // Четене на текст от файла
+            //РЎСЉР·РґР°РІР°РЅРµ РЅР° StringBuilder
             StringBuilder fileContent = new StringBuilder();
             String line;
             
@@ -29,12 +29,12 @@ public class Exercise2 {
                 fileContent.append(line).append("\n");
             }
 
-            // Извеждане на прочетения текст на конзолата
+            //РџСЂРёРЅС‚РёСЂР°РЅРµ РЅР° РїСЂРѕС‡РµС‚РµРЅРёСЏ С„Р°Р№Р»
             System.out.println("File content:\n" + fileContent.toString());
         } 
         catch (IOException e) 
         {
-            // Информиране при грешка
+            // РџСЂРёРЅС‚РёСЂР°РЅРµ РЅР° РіСЂРµС€РєР°С‚Р°
             System.out.println("Error: " + e.getMessage());
 	    }
 }

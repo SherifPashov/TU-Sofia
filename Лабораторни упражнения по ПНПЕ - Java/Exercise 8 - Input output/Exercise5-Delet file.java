@@ -7,12 +7,12 @@ public class Exercise5
     {
         Scanner scanner = new Scanner(System.in);
 
-        // Въвеждане на името на файла, който ще се изтрие
+        // Р’СЉРІРµР¶РґР°РЅРµ РёРјРµС‚Рѕ РЅР° С„Р°Р№Р»Р° Р·Р° РёР·С‚СЂРёРІР°РЅРµ
         System.out.println("Enter the file name to delete:");
         
         String fileNameToDelete = scanner.nextLine();
 
-        // Проверка за съществуване на файла
+        // РџСЂРѕРІРµСЂРєР° Р·Р° СЃСЉС‰РµСЃС‚РІСѓРІР°РЅРµ РЅР° С„Р°Р№Р»Р°
         File fileToDelete = new File(fileNameToDelete);
         
         if (!fileToDelete.exists()) 
@@ -21,7 +21,7 @@ public class Exercise5
             return;
         }
 
-        // Изтриване на файла
+        // РР·С‚СЂРёРІР°РЅРµ РЅР° С„Р°Р№Р»Р°
         if (fileToDelete.delete()) 
         {
             System.out.println("File deleted successfully.");

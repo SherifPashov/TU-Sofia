@@ -7,14 +7,14 @@ public class ReverseString {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		 
-		System.out.println("Въведете символен низ:");
+		System.out.println("Р’СЉРІРµРґРё С‚РµРєСЃС‚:");
         String inputString = scanner.nextLine();
         
         StringBuilder reversed = new StringBuilder(inputString);
-     // Обръщане на символния низ
+     // РћР±СЂСЉС‰Р°РЅРµ РЅР° С‚РµРєСЃС‚Р°
         String reversedString =reversed.reverse().toString();
-     // Извеждане на обратно обрънатия низ
-        System.out.println("Обратен низ: " + reversedString);
+     
+        System.out.println("РћР±СЉСЂРЅР°С‚ С‚РµРєСЃС‚: " + reversedString);
 
 	}
 

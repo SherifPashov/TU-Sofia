@@ -8,23 +8,20 @@ public class UpperCaseString {
 		
 		Scanner scanner = new Scanner(System.in);
         
-	     	// Четене на текст от конзолата
-	        System.out.println("Въведете текст с <upcase> тагове:");
+	     	
+	        System.out.println("Р’СЉРІРµРґРµС‚Рµ С‚РµРєСЃ СЃ <upcase></upcase> СЃСЉРґСЉСЂР¶Р°С‰Рѕ РІ РЅРµРіРѕ:");
 	        
 	        // String text1 = "We are living in a <upcase>yellow submarine</upcase>. We don't have <upcase>anything</upcase> else.";
 	        
 	        String text1 = scanner.nextLine();
 	        
-	        // Извикване на метода за промяна на регистъра на буквите в таговете
 	        String modifiedText = changeCaseInsideTags(text1);
 
-	        // Извеждане на резултата
-	        System.out.println("Текст след промяна на регистъра: " + modifiedText);
+	        // РџСЂРёРЅС‚РёСЂР°РЅРµ РЅР° С‚РµРєСЃС‚Р° 
+	        System.out.println("РџСЂРѕР±СЂР°Р·РµРЅ С‚РµРєСЃС‚: " + modifiedText);
 	    
 		}
 		
-	    
-	 // Метод за промяна на регистъра на буквите в тагове
 	    private static String changeCaseInsideTags(String text) 
 	    {
 	        StringBuilder result = new StringBuilder();

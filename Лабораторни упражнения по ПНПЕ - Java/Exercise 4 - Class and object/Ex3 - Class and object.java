@@ -5,13 +5,10 @@ class Ex3 {
         Student student = new Student("Student 1" , 10000);
         student.printInfo();
 
-        // Създаване на обект от клас без конструктор
         MyClassWithoutConstructor obj1 = new MyClassWithoutConstructor();
 
-        // Създаване на обект от клас с конструктор по подразбиране
         ClassWithConstructor obj2 = new ClassWithConstructor();
 
-        // Създаване на обект от клас с overloaded constructor
         ClassWithConstructor obj3 = new ClassWithConstructor("Hello, World!");
     }
 }
@@ -40,19 +37,16 @@ class Student {
     }
 }
 
-// Клас без конструктор
 class MyClassWithoutConstructor {
-    // Полета и методи могат да бъдат добавени според нуждите
 }
 
-// Клас с конструктор по подразбиране и overloaded constructor
 class ClassWithConstructor {
     public ClassWithConstructor() {
-        System.out.println("Конструктор по подразбиране.");
+        System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.");
     }
 
     public ClassWithConstructor(String message) {
-        System.out.println("Конструктор със съобщение: " + message);
+        System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: " + message);
     }
 }
 

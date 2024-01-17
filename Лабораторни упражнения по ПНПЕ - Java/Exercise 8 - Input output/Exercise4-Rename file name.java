@@ -8,11 +8,11 @@ public class Exercise4 {
 	    {
 	        Scanner scanner = new Scanner(System.in);
 
-	        // Въвеждане на името на файла, който ще се преименува
+	        // Р’СЉРІРµР¶РґР°РЅРµ РЅР° С‚РµРєСѓС‰РѕС‚Рѕ РёРјРµ РЅР° С„Р°Р№Р»Р° 
 	        System.out.println("Enter the current file name:");
 	        String currentFileName = scanner.nextLine();
 
-	        // Проверка за съществуване на файла
+	        // РџСЂРѕРІРµСЂРєР° РґР° Р»Рё СЃСЉС‰РµСЃС‚РІСѓРІР° С„Р°Р№Р»Р°
 	        File currentFile = new File(currentFileName);
 	        
 	        if (!currentFile.exists()) 
@@ -22,12 +22,12 @@ public class Exercise4 {
 	            return;
 	        }
 
-	        // Въвеждане на новото име на файла
+	        // РќРѕРІРѕ РёРјРµ РЅР° С„Р°Р№Р»Р°
 	        System.out.println("Enter the new file name:");
 	        String newFileName = scanner.nextLine();
 	        
 
-	        // Проверка за съществуване на файла с новото име
+	        // РџСЂРѕРІРµСЂРєР° Р·Р° СЃСЉС‰РµСЃС‚РІСѓРІР°РЅРµ РЅР° С„Р°Р№Р»Р° СЃ РЅРѕРІРѕС‚Рѕ РёРјРµ
 	        File newFile = new File(newFileName);
 	        
 	        if (newFile.exists()) 
@@ -36,7 +36,7 @@ public class Exercise4 {
 	            return;
 	        }
 
-	        // Преименуване на файла
+	        // РџСЂРµРёРјРµРЅСѓРІР°РЅРµ РЅР° С„Р°Р№Р»Р°
 	        if (currentFile.renameTo(newFile)) 
 	        {
 	        	

@@ -7,21 +7,22 @@ public class Exercise1 {
 	    	
 	        Scanner scanner = new Scanner(System.in);
 
-	        // Име на файла
+	        // РёРјРµ РЅР° С„Р°Р№Р»Р° 
 	        String fileName = "test.txt";
 
-	        // Въвеждане на текст от потребителя
 	        System.out.println("Enter text:");
 	        
 	        String inputText = scanner.nextLine();
 
-	        // Създаване на файлов поток и запис на текста
 	        try
 	        {
+				//РћС‚РІР°СЂСЏРЅРµ РЅР° С„Р№Р»Р° 
 	        	FileWriter fileWriter = new FileWriter(fileName);
 	        	
+				//Р—Р°РїРёСЃ РЅР° С„Р°Р№Р»Р°
 	            fileWriter.write(inputText);
 	            
+				//Р—Р°С‚РІР°СЂСЏРЅРµ РЅР° С„Р°Р№Р»Р°
 	            fileWriter.close();
 	            
 	            System.out.println("File saved.");

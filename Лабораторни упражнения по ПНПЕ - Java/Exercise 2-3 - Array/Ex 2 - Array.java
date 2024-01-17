@@ -3,10 +3,10 @@ package test;
 public class Ex2 {
 
 	public static void main(String[] args) {
-        // Едномерен масив
+        // РЎСЉР·РґР°РІР°РЅРµ РЅР° РјР°СЃРёРІ
         int[] array1D = new int[]{1, 2, 3, 4, 5};
 
-        // Двумерен масив
+        // РЎСЉР·РґР°РІР°РЅРµ РЅР° РґРІСѓРјРµСЂРµРЅ РјР°СЃРёРІ
         int[][] array2D = new int[][]
 					        		{{1, 2, 3}, 
 					        		{4, 5, 6}, 
@@ -16,13 +16,13 @@ public class Ex2 {
         printArray2D(array2D);
         
 
-        // Инициализация на елементите в едномерен масив по определено правило
+        // РЈРґРІРѕСЏРІР°РЅРµ РЅР° РµР»РµРјРµРЅС‚РёС‚Рµ РЅР° РµРґРЅРѕРјРµСЂРЅРёСЏ РјР°СЃРёРІ
         for (int i = 0; i < array1D.length; i++) 
         {
             array1D[i] = i * 2;
         }
 
-        // Инициализация на елементите в двумерен масив по определено правило
+        // СѓРІРµР»РёС‡Р°РІР°РЅРµ РЅР° РµР»РµРјРµРЅС‚РёС‚Рµ РЅР° РґРІСѓРјРµСЂРЅРёСЏ РјР°СЃРёРІ СЃ РµРґРёРЅРёС†Р°
         int value = 1;
         for (int i = 0; i < array2D.length; i++) 
         {
@@ -35,18 +35,18 @@ public class Ex2 {
         printArray2D(array2D);
         
         
-        // Инициализация на елементите на масив със случайни числа
-        System.out.println("Начален вид на едномерия масив");
+        
+        System.out.println("РћСЂРёРіРёРЅР°Р»РµРЅ РµРґРЅРѕРјРµСЂРµРЅ РјР°СЃРёРІ");
         printArray(array1D);
         for (int i = 0; i < array1D.length; i++) 
         {
             array1D[i] = (int) (Math.random() * 100);
         }
-        System.out.println("Рандом числа в едномерия масив");
+        System.out.println("РЎРјСЏРЅР° РЅР° РµР»РµРјРµРЅС‚РёС‚Рµ РЅР° РµРґРЅРѕРјРµСЂРЅРёСЏ РјР°СЃРёРІ СЃ СЂР°РЅРґРѕРј С‡РёСЃР»Р°");
         printArray(array1D);
         
         
-        // Сума и разлика на едномерни масиви
+        // РЎСѓР±РёСЂР°РЅРµ Рё РёР·РІР°Р¶РґР°РЅРµ РЅР° РµРґРЅРѕРјРµСЂРЅРё РјР°СЃРёРІРё 
         int[] array1 = {1, 2, 3, 4, 5};
         int[] array2 = {5, 4, 3, 2, 1};
 
@@ -59,17 +59,17 @@ public class Ex2 {
             diffArray[i] = array1[i] - array2[i];
         }
 
-        System.out.println("Сума на едномерни масиви:");
+        System.out.println("РЎСѓРјР°С‚Р° РЅР° РґРІР°С‚Р° РјР°СЃРёРІР°:");
         printArray(sumArray);
 
-        System.out.println("Разлика на едномерни масиви:");
+        System.out.println("Р Р°Р·Р»РёРєР°С‚Р° РЅР° РґРІР°С‚Р° РјР°СЃРёРІР°:");
         printArray(diffArray);
     }
 	
-	// Последователно обхождане на елементите в двумерен масив
+	// РџСЂРёРЅС‚РёСЂР°РЅРµ РЅР° РґРІСѓРјРµСЂРµРЅ РјР°СЃРёРІ
 	private static void printArray2D(int[][] array2D)
 	{
-		  System.out.println("Двумерен масив:");
+		  System.out.println("Р”РІСѓРјРµСЂРµРЅ РјР°СЃРёРІ:");
 	        for (int row=0;row<array2D.length;row++) {
 	            for (int colum=0;colum<array2D[row].length;colum++) {
 	                System.out.print(array2D[row][colum] + " ");
@@ -78,7 +78,7 @@ public class Ex2 {
 	        }
 	}
 
-    // Помощен метод за отпечатване на едномерен масив
+    // РџСЂРёРЅС‚РёСЂР°РЅРµ РЅР° РµРґРЅРёРјРµСЂРµРЅ РјР°СЃРёРІ
     private static void printArray(int[] arr) 
     {
         for (int element : arr) {

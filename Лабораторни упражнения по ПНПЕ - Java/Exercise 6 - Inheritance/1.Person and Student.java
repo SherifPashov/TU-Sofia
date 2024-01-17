@@ -22,14 +22,14 @@ public class Exercise1 {
             //Person invalidYearOfBirthPerson = new Person("John", "Doe", -1990);
         // 3-4 Student Test
             
-         // Тестове за създаване на обекти от класа Student
+         
             Student student1 = new Student("Alice", "Smith", 1990, 123456789L);
             System.out.println(student1);
 
             Student student2 = new Student("Bob", "Johnson", 1995);
             System.out.println(student2);
 
-            // Опит за създаване на студент с невалиден факултетен номер
+            // пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
             //Student invalidStudent = new Student("Charlie", "Brown", 1985, -123456789L);
 	       
 	    }
@@ -44,7 +44,7 @@ public class Exercise1 {
 	    private String lastName;
 	    private int yearOfBirth;
 
-	    // Конструктори
+	   
 	    public Person() {
 	    	setName(DEFAULT_NAME);
 	        setLastName(DEFAULT_LAST_NAME);
@@ -69,7 +69,7 @@ public class Exercise1 {
 	        setYearOfBirth(yearOfBirth);
 	    }
 
-	    // Методи за четене и запис
+	    
 	    public String getName() {
 	        return name;
 	    }
@@ -106,7 +106,7 @@ public class Exercise1 {
 	        }
 	    }
 
-	    // Помощни методи за валидация
+	    
 	    private boolean isValidName(String value) {
 	        return value != null && !value.trim().isEmpty() && value.matches("^[a-zA-Z]+$");
 	    }
@@ -122,7 +122,6 @@ public class Exercise1 {
 
 	    private long facultyNumber;
 
-	    // Конструктори
 	    public Student(String name, String lastName, int yearOfBirth, long facultyNumber) {
 	        super(name, lastName, yearOfBirth);
 	        setFacultyNumber(facultyNumber);
@@ -132,12 +131,10 @@ public class Exercise1 {
 	        this(name, lastName, yearOfBirth, MAX_FACULTY_NUMBER);
 	    }
 
-	    // Метод за четене
 	    public long getFacultyNumber() {
 	        return facultyNumber;
 	    }
 
-	    // Метод за запис
 	    public void setFacultyNumber(long facultyNumber) {
 	        if (isValidFacultyNumber(facultyNumber)) {
 	            this.facultyNumber = facultyNumber;
@@ -146,13 +143,10 @@ public class Exercise1 {
 	        }
 	    }
 
-	    // Помощен метод за валидация
 	    private boolean isValidFacultyNumber(long value) {
 	        return value >= MIN_FACULTY_NUMBER && value <= MAX_FACULTY_NUMBER;
 	    }
-
-	    // Пренаписване на метода toString за форматиране на информацията
-	    //Override
+		
 	    public String toString() {
 	        return "Name"+super.name+", LastName: "+super.lastName+", YearOfBirth: "+super.yearOfBirth+", Faculty Number: " + facultyNumber;
 	    }

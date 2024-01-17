@@ -7,27 +7,28 @@ public class CountSubstringCantainsWord {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		 
-        // Четене на текст и подниз от конзолата
-        System.out.println("Въведете текст:");
+        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+        System.out.println("Р’СЉРІРµРґРё С‚РµРєСЃ:");
         String text = scanner.nextLine();
-        System.out.println("Въведете подниз:");
+        System.out.println("РЎРїРµС†РёР°Р»РЅР° РґСѓРјР°:");
         String substring = scanner.nextLine();
 
-        // Извикване на метода за броене на срещания на подниза в текста
+        // РР·РїРѕР»Р·РІР°РЅРµ РЅР° РјРµС‚РѕРґР°
         int occurrences = countSubstringOccurrences(text, substring);
 
-        // Извеждане на резултата
-        System.out.println("Брой срещания на подниза: " + occurrences);
+        // РџСЂРёРЅС‚РёСЂР°РЅРµ
+        System.out.println("Р‘СЂРѕР№ РїСЉС‚Рё СЃСЂРµС‰РЅР°С‚Р° РґСѓРјР°: " + occurrences);
 
 	}
-	// Метод за броене на срещания на подниз в текст
+	// РњРµС‚РѕРґ Р·Р° РїСЂРµР±СЂРѕСЏРІР°РЅРµ РЅР° Р±СЂРѕР№ РїСЉС‚Рё СЃСЂРµС‰РЅР°С‚Р° РґСѓРјР° РІ С‚РµРєСЃС‚Р°
     private static int countSubstringOccurrences(String text, String substring) {
         int count = 0;
         int index = text.indexOf(substring);
 
-        while (index != -1) {
+        while (index != -1) 
+        {
             count++;
-            // Търсенето продължава от следващата позиция, за да се избегне безкраен цикъл
+
             index = text.indexOf(substring, index + 1);
         }
 
