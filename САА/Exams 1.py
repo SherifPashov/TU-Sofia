@@ -1,22 +1,21 @@
 class Node:
-    def __init__(self, data: int) -> None:
+    def __init__(self, data):
         self.data = data
         self.next: None | Node = None
  
- 
 class LinkedList:
-    def __init__(self) -> None:
+    def __init__(self):
         self.head = None
  
-    def append(self, data: int) -> None:
-        if self.head:
+    def append(self, data):
+        if not self.head:
+             self.head = Node(data)
+        else:
             current_node = self.head
+            
             while current_node.next:
                 current_node = current_node.next
             current_node.next = Node(data)
- 
-        else:
-            self.head = Node(data)
  
     def avail(self, avail):
         current_node = self.head
@@ -40,7 +39,6 @@ class LinkedList:
         while current_node:
             print(current_node.data, end=" ")
             current_node = current_node.next
- 
  
 main_list = LinkedList()
 for index in range(10):
