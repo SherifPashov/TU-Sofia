@@ -1,0 +1,50 @@
+def is_sorted(input):
+    n = len(input)
+    sequence=input.copy()
+    cauntMove = 0
+    i = 0
+    while i < n:
+
+        for j in range(0, n-i-1):
+            flagSort = False
+            if sequence[j] > sequence[j+1]:
+                sequence[j], sequence[j+1] = sequence[j+1], sequence[j]
+
+                flagSort = True
+        if flagSort:
+            sequence.pop()
+            cauntMove+=1
+            n-=1
+            if n==1:
+                return cauntMove
+
+        else:
+            i+=1
+
+
+    return cauntMove
+
+
+def optimal_winner(N, permutation):
+
+    for i in range(N):
+        count = is_sorted(permutation)
+
+        if count % 2 == 1:
+            winner = "Гошо"
+        else:
+            winner = "Пешо"
+
+        return winner
+
+# Четене на броя на тестовите случаи
+T = int(input("Въведете броя на тестовите случаи: "))
+
+for _ in range(T):
+    # Четене на броя на елементите и пермутацията
+    N = int(input())
+    permutation = list(map(int, input().split()))
+
+    # Определяне на победителя и извеждане на резултата
+    winner = optimal_winner(N, permutation)
+    print(f"За тестов случай с N={N} победител: {winner}")

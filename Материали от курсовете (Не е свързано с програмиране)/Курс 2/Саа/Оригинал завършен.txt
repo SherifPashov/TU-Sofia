@@ -1,0 +1,54 @@
+def is_sorted(inputArr):
+    # Функция, която сортира входния масив и връща броя на инверсиите (размени)
+    lenghtArr = len(inputArr)
+    cauntMove = 0
+    i = 0
+    while i < lenghtArr:
+
+        for j in range(0, lenghtArr-i-1):
+            flagSortLast = False
+            if inputArr[j] > inputArr[j+1]:
+                 # Ако текущият елемент е по-голям от следващия, разменяме ги
+                inputArr[j], inputArr[j+1] = inputArr[j+1], inputArr[j]
+
+                flagSortLast = True
+
+        if flagSortLast:
+             # Ако има размяна, убираме последния елемент (най-големият)
+            inputArr.pop()
+            cauntMove+=1
+            lenghtArr-=1
+            if lenghtArr == 1:
+                # Ако остава само един елемент, завършваме
+                return cauntMove
+
+        else:
+            i += 1
+
+
+    return cauntMove
+
+
+def optimal_winner(N, permutation):
+
+    for i in range(N):
+        countMove = is_sorted(permutation)
+
+        if countMove % 2 == 1:
+            winner = "Гошо"
+        else:
+            winner = "Пешо"
+
+        return winner
+
+# Четене на броя на тестовите случаи
+T = int(input("Въведете броя на тестовите случаи: "))
+
+for n in range(T):
+    # Четене на броя на елементите и пермутацията
+    N = int(input(f"Брой елементи за игра {n+1}: "))
+    permutation = list(map(int, input().split()))
+
+    # Определяне на победителя и извеждане на резултата
+    winner = optimal_winner(N, permutation)
+    print(f"За игра: {n+1}  Победител e: {winner}")

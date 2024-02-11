@@ -1,0 +1,34 @@
+def is_sorted(sequence):
+    return all(x < y for x, y in zip(sequence, sequence[1:]))
+
+def optimal_winner(N, permutation):
+    # Инициализация на оптималния победител
+    winner = "Гошо"
+
+    for i in range(N):
+        # Ако текущият елемент е нечетен, сменяме победителя
+        if permutation[i] % 2 == 1:
+            winner = "Пешо"
+    
+    # Проверка дали можем да получим възходяща последователност след премахване на елемент
+    for i in range(N):
+        remaining_sequence = permutation[:i] + permutation[i+1:]
+        if is_sorted(remaining_sequence):
+            return "Гошо"  # Гошо печели, ако може да се получи възходяща последователност
+    
+    return winner
+
+# Четене на броя на тестовите случаи
+T = int(input("Въведете броя на тестовите случаи: "))
+
+for _ in range(T):
+    # Четене на броя на елементите и пермутацията
+    N = int(input())
+    permutation = list(map(int, input().split()))
+
+    # Определяне на победителя и извеждане на резултата
+    winner = optimal_winner(N, permutation)
+    print(f"За тестов случай с N={N} победител: {winner}")
+
+4 3 2 1
+
